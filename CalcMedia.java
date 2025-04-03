@@ -10,15 +10,19 @@ public class CalcMedia {
         Scanner lerTeclado = new Scanner(System.in);
         System.out.println("Digite seu RA: ");
         int ra = lerTeclado.nextInt();
-        lerTeclado.nextLine();
+        lerTeclado.nextLine(); // para limpar buffer teclado
         
         System.out.println("Digite seu nome: ");
         String nome = lerTeclado.nextLine();
 
         System.out.println("Digite a nota G1: ");
         double g1 = lerTeclado.nextDouble();
+        lerTeclado.nextLine(); // para limpar buffer teclado
+        
         System.out.println("Digite a nota G2: ");
         double g2 = lerTeclado.nextDouble();
+        lerTeclado.nextLine(); // para limpar buffer teclado
+        
         System.out.println("Existe ponto extra: (true/false)");
         boolean pontoExtra = lerTeclado.nextBoolean();
 
