@@ -1,5 +1,5 @@
 
-
+import java.time.LocalDate;
 
 class Veiculo {
 
@@ -8,7 +8,26 @@ class Veiculo {
     int ano;
     String placa;
 
-    int calcTempoUso( int anoBase ) {
+    Veiculo() {
+        this.marca = "Marca-não-registrada";
+        this.modelo = "Modelo-não-nomeado";
+        this.placa = "Placa-não-registrada";
+    }
+
+    Veiculo(String marca, String modelo, int ano, String placa) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.placa = placa;
+
+    }
+
+    int calcTempoUso() {
+        int anoAtual = LocalDate.now().getYear();
+        return this.calcTempoUso(anoAtual);
+    }
+
+    int calcTempoUso(int anoBase) {
         int tempoUso = anoBase - this.ano;
         return tempoUso;
     }

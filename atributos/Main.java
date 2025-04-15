@@ -1,10 +1,11 @@
 
-import java.time.LocalDate;
 
 
 public class Main {
 
     public static void main(String[] args) {
+        Veiculo unoDeFirma = new Veiculo("Fiat", "Uno com escada", 2002, "XYZ-9876");
+
         Veiculo corolla = new Veiculo();
         corolla.marca = "Toyota";
         corolla.modelo = "4.0";
@@ -28,9 +29,7 @@ public class Main {
         
         corolla.ano = 2011;
 
-        int anoAtual = LocalDate.now().getYear();
-
-        int tempoUsoCorolla = corolla.calcTempoUso(anoAtual);
+        int tempoUsoCorolla = corolla.calcTempoUso(2040);
         System.out.println("\nTempo de uso: " + tempoUsoCorolla + " anos");
 
         System.out.println("\nO meu carro é " + corolla.marca + " - " + corolla.modelo + " - ");
