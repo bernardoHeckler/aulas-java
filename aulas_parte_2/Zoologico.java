@@ -2,17 +2,22 @@ import java.util.List;
 
 public class Zoologico {
     public static void main(String[] args) {
+        System.out.println("Número de animais: " + Animal.getContador());
+
+        
+
         Animal cachorro = new Cachorro("Noah");
-        Animal gato = new Gato("Jack");
         Animal hamster = new Hamster("Maiquinho");
+        Animal gato = new Gato("Jack");
 
-        emetirSons(List.of(cachorro, gato, hamster));
+        // AnimalUtils utils = new AnimalUtils();
+        AnimalUtils.emitirSons(List.of(cachorro, hamster, gato));
+
+        System.out.println("Número de animais: " + Animal.getContador());
+
     }
 
-    public static void emetirSons(List<Animal> animais){
-        for (Animal animal : animais) {
-            System.out.println("O animal de nome " + animal.getNome() + " faz som de " + animal.emitirSom()) ;
-        }        
-    }
-    
+
+   
+
 }

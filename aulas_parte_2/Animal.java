@@ -1,17 +1,20 @@
-public class Animal {
-
+public abstract class Animal {
+    private static int contador = 0;
     private String nome;
 
     public Animal(String nome){
         this.nome = nome;
+        contador++;
     }
 
-    public String getNome() {
+    public final String getNome() {
         return nome;
     }
 
-    public String emitirSom(){
-        return "Som de Animal genérico";
+    public abstract String emitirSom();
+
+    public static int getContador() {
+        return contador;
     }
 
 }

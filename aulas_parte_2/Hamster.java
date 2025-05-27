@@ -1,4 +1,4 @@
-public class Hamster extends Animal {
+public final class Hamster extends Animal {
     
     public Hamster(String nome) {
         super(nome);

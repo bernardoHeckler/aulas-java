@@ -1,4 +1,4 @@
-public class Cachorro extends Animal {
+public final class Cachorro extends Animal {
     
     public Cachorro(String nome) {
         super(nome);
@@ -8,5 +8,4 @@ public class Cachorro extends Animal {
     public String emitirSom() {
         return "Au au au au";
     }
-    
 }
